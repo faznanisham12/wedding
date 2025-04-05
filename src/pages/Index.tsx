@@ -27,15 +27,15 @@ const Index = () => {
 
   // Define classes based on isMobile
   const containerClass = isMobile 
-    ? "flex flex-col min-h-screen" 
-    : "flex flex-row min-h-screen";
+    ? "flex flex-col min-h-screen overflow-hidden" 
+    : "flex flex-row min-h-screen overflow-hidden";
 
   const brideClasses = isMobile
     ? `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
         animating && hoveredSide === 'bride' ? 'scale-105 z-10' : ''
       }`
     : `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
-        hoveredSide === 'groom' ? 'md:w-1/3 opacity-70' : ''
+        hoveredSide === 'groom' ? 'md:w-1/4' : hoveredSide === 'bride' ? 'md:w-3/4' : ''
       } ${animating && hoveredSide === 'bride' ? 'scale-105 z-10' : ''}`;
 
   const groomClasses = isMobile
@@ -43,7 +43,7 @@ const Index = () => {
         animating && hoveredSide === 'groom' ? 'scale-105 z-10' : ''
       }`
     : `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
-        hoveredSide === 'bride' ? 'md:w-1/3 opacity-70' : ''
+        hoveredSide === 'bride' ? 'md:w-1/4' : hoveredSide === 'groom' ? 'md:w-3/4' : ''
       } ${animating && hoveredSide === 'groom' ? 'scale-105 z-10' : ''}`;
 
   return (
