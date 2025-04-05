@@ -3,7 +3,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Gallery as GalleryIcon, MapPin } from "lucide-react";
+import { Home, Image as GalleryIcon, MapPin } from "lucide-react";
 
 interface ThemedLayoutProps {
   children: React.ReactNode;

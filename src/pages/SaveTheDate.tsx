@@ -1,8 +1,7 @@
-
 import ThemedLayout from "@/components/layout/ThemedLayout";
 import { useTheme } from "@/context/ThemeContext";
 import { Button } from "@/components/ui/button";
-import { Calendar, Heart } from "lucide-react";
+import { Calendar, Heart, MapPin, Image as GalleryIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const SaveTheDate = () => {
@@ -77,5 +76,4 @@ const SaveTheDate = () => {
   );
 };
 
-import { MapPin, GalleryIcon } from 'lucide-react';
 export default SaveTheDate;
