@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +91,50 @@
 
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
   }
+  
+  html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .bride-theme {
+    @apply bg-bride-background text-bride-text;
+  }
+  
+  .bride-heading {
+    @apply font-serif text-bride-heading;
+  }
+  
+  .groom-theme {
+    @apply bg-groom-background text-groom-text;
+  }
+  
+  .groom-heading {
+    @apply font-sans text-groom-heading;
+  }
+  
+  .theme-transition {
+    @apply transition-all duration-500 ease-in-out;
+  }
+}
+
+.bride-bg-gradient {
+  background: linear-gradient(180deg, #FDF8F5 0%, #FDE1D3 100%);
+}
+
+.groom-bg-gradient {
+  background: linear-gradient(180deg, #121212 0%, #1A1A1A 100%);
+}
+
+.side-slider-container {
+  min-height: 100vh;
+}
+
+.video-container {
+  aspect-ratio: 16 / 9;
 }
