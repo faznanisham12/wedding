@@ -3,12 +3,14 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
 import { Button } from "@/components/ui/button";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   const [hoveredSide, setHoveredSide] = useState<'bride' | 'groom' | null>(null);
   const { setTheme } = useTheme();
   const navigate = useNavigate();
   const [animating, setAnimating] = useState(false);
+  const isMobile = useIsMobile();
 
   const handleSelectSide = (side: 'bride' | 'groom') => {
     setAnimating(true);
@@ -23,21 +25,34 @@ const Index = () => {
     setTheme(null);
   }, [setTheme]);
 
-  const brideClasses = `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
-    hoveredSide === 'groom' ? 'md:w-1/3 opacity-70' : ''
-  } ${animating && hoveredSide === 'bride' ? 'scale-105 z-10' : ''}`;
+  // Define classes based on isMobile
+  const containerClass = isMobile 
+    ? "flex flex-col min-h-screen" 
+    : "flex flex-row min-h-screen";
 
-  const groomClasses = `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
-    hoveredSide === 'bride' ? 'md:w-1/3 opacity-70' : ''
-  } ${animating && hoveredSide === 'groom' ? 'scale-105 z-10' : ''}`;
+  const brideClasses = isMobile
+    ? `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
+        animating && hoveredSide === 'bride' ? 'scale-105 z-10' : ''
+      }`
+    : `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
+        hoveredSide === 'groom' ? 'md:w-1/3 opacity-70' : ''
+      } ${animating && hoveredSide === 'bride' ? 'scale-105 z-10' : ''}`;
+
+  const groomClasses = isMobile
+    ? `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
+        animating && hoveredSide === 'groom' ? 'scale-105 z-10' : ''
+      }`
+    : `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
+        hoveredSide === 'bride' ? 'md:w-1/3 opacity-70' : ''
+      } ${animating && hoveredSide === 'groom' ? 'scale-105 z-10' : ''}`;
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen">
+    <div className={containerClass}>
       {/* Bride Side */}
       <div
         className={brideClasses}
-        onMouseEnter={() => setHoveredSide('bride')}
-        onMouseLeave={() => setHoveredSide(null)}
+        onMouseEnter={() => !isMobile && setHoveredSide('bride')}
+        onMouseLeave={() => !isMobile && setHoveredSide(null)}
         style={{
           background: "linear-gradient(to bottom, #FDF8F5, #FDE1D3)"
         }}
@@ -62,8 +77,8 @@ const Index = () => {
       {/* Groom Side */}
       <div
         className={groomClasses}
-        onMouseEnter={() => setHoveredSide('groom')}
-        onMouseLeave={() => setHoveredSide(null)}
+        onMouseEnter={() => !isMobile && setHoveredSide('groom')}
+        onMouseLeave={() => !isMobile && setHoveredSide(null)}
         style={{
           background: "linear-gradient(to bottom, #121212, #1A1A1A)"
         }}
