@@ -16,7 +16,7 @@ const Index = () => {
     setAnimating(true);
     setTimeout(() => {
       setTheme(side);
-      navigate('/save-the-date');
+      navigate(`/${side}/save-the-date`);
     }, 500);
   };
 
