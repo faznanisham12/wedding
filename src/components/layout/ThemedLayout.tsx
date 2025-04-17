@@ -36,7 +36,7 @@ const ThemedLayout: React.FC<ThemedLayoutProps> = ({ children }) => {
       <header className={`py-4 ${theme === 'bride' ? 'border-b border-bride-border' : 'border-b border-groom-border'}`}>
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className={`text-xl md:text-2xl ${headingClass}`}>
-            Anna & John
+            Fazna & Nisham
           </h1>
           <nav className="flex gap-2 md:gap-4">
             <Button 
