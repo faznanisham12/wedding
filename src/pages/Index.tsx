@@ -59,7 +59,7 @@ const Index = () => {
       >
         <div className="max-w-md mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-bride-heading animate-fade-in">
-            Anna's Side
+            Fazna's Side
           </h2>
           <p className="text-bride-text mb-8 animate-slide-up">
             Experience our wedding through the bride's perspective, with a warm, rustic and antique aesthetic.
@@ -85,7 +85,7 @@ const Index = () => {
       >
         <div className="max-w-md mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans mb-6 text-groom-heading animate-fade-in">
-            John's Side
+            Nisham's Side
           </h2>
           <p className="text-groom-text mb-8 animate-slide-up">
             View our wedding through the groom's lens, with a sleek, modern and sophisticated dark aesthetic.
