@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
@@ -66,8 +65,9 @@ const Index = () => {
         // Initial state - both sides showing equally
         return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-700 ease-in-out`;
       } else if (expandedSide === side) {
-        // This side is expanded - with improved smooth animation
-        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 z-10 fixed top-0 left-0 right-0 bottom-0 mobile-expand-animation`;
+        const animationClass = side === 'bride' ? 'bride-expand-animation' : 'groom-expand-animation';
+        // This side is expanded - with origin-aware smooth animation
+        return `side-slider-container w-full flex flex-col justify-center items-center text-center p-8 z-10 fixed top-0 left-0 right-0 bottom-0 ${animationClass}`;
       } else {
         // This side is minimized (other side is expanded)
         return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-700 ease-in-out opacity-0 overflow-hidden animate-fade-out`;
@@ -94,7 +94,7 @@ const Index = () => {
           background: "linear-gradient(to bottom, #FDF8F5, #FDE1D3)"
         }}
       >
-        <div className={`max-w-md mx-auto ${!contentVisible ? 'opacity-0' : expandedSide === 'bride' ? 'content-reposition-animation' : ''}`}>
+        <div className="max-w-md mx-auto animate-content-slide">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-bride-heading animate-fade-in">
             Fazna's Side
           </h2>
@@ -124,7 +124,7 @@ const Index = () => {
           background: "linear-gradient(to bottom, #121212, #1A1A1A)"
         }}
       >
-        <div className={`max-w-md mx-auto ${!contentVisible ? 'opacity-0' : expandedSide === 'groom' ? 'content-reposition-animation' : ''}`}>
+        <div className="max-w-md mx-auto animate-content-slide">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans mb-6 text-groom-heading animate-fade-in">
             Nisham's Side
           </h2>

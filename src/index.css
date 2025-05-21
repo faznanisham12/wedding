@@ -222,33 +222,47 @@
   animation: content-fade-in 0.6s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-/* New mobile expansion animations */
-@keyframes mobile-expand {
+/* Content sliding animation for smooth movement */
+@keyframes content-slide {
   0% {
-    height: 50%;
-    border-radius: 0;
+    transform: translateY(0);
   }
   100% {
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
-.mobile-expand-animation {
-  animation: mobile-expand 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes content-reposition {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
 
-.content-reposition-animation {
-  animation: content-reposition 0.7s 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.animate-content-slide {
+  animation: content-slide 0.001s linear both;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Direction-aware expansion animations */
+@keyframes bride-expand {
+  0% {
+    height: 50%;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.bride-expand-animation {
+  animation: bride-expand 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes groom-expand {
+  0% {
+    height: 50%;
+    top: 50%;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+.groom-expand-animation {
+  animation: groom-expand 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
