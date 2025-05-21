@@ -29,7 +29,7 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         
-        // Updated Bride theme colors with sophisticated beige and brown palette
+        // Bride theme colors
         bride: {
           background: '#F5F5DC', // Beige
           accent: '#CBB799', // Khaki
@@ -38,13 +38,14 @@ export default {
           border: '#A07856', // Chamoisee
         },
         
-        // Groom theme colors (unchanged)
+        // Updated Groom theme colors with new sophisticated dark palette
         groom: {
-          background: '#121212',
-          accent: '#333333',
-          text: '#EEEEEE',
-          heading: '#FFFFFF',
-          border: '#2A2A2A',
+          background: '#1B1B1B', // Eclipse Black
+          accent: '#24476C', // Astral Blue
+          text: '#E6E8E6', // Stardust White
+          heading: '#E6E8E6', // Stardust White
+          border: '#A8A9AD', // Moonlight Gray
+          secondary: '#0A122A', // Midnight Navy
         },
         
         primary: {

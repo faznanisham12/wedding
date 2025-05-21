@@ -116,7 +116,7 @@
   }
   
   .groom-heading {
-    @apply font-sans text-groom-heading;
+    @apply font-sans text-groom-heading tracking-wide;
   }
   
   .theme-transition {
@@ -129,7 +129,7 @@
 }
 
 .groom-bg-gradient {
-  background: linear-gradient(180deg, #121212 0%, #1A1A1A 100%);
+  background: linear-gradient(180deg, #1B1B1B 0%, #0A122A 100%);
 }
 
 .side-slider-container {
