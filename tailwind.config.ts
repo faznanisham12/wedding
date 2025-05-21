@@ -29,16 +29,16 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         
-        // Bride theme colors
+        // Updated Bride theme colors with sophisticated beige and brown palette
         bride: {
-          background: '#FDF8F5',
-          accent: '#FDE1D3',
-          text: '#5A5A5A',
-          heading: '#3D3D3D',
-          border: '#E8D8D0',
+          background: '#F5F5DC', // Beige
+          accent: '#CBB799', // Khaki
+          text: '#6F4D38', // Coffee
+          heading: '#3D211A', // Bistre
+          border: '#A07856', // Chamoisee
         },
         
-        // Groom theme colors
+        // Groom theme colors (unchanged)
         groom: {
           background: '#121212',
           accent: '#333333',
@@ -87,7 +87,7 @@ export default {
         }
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
+        'serif': ['Cormorant Garamond', 'Playfair Display', 'serif'],
         'sans': ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
