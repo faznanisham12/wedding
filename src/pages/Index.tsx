@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
@@ -52,8 +53,8 @@ const Index = () => {
         // Initial state - both sides showing equally
         return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out`;
       } else if (expandedSide === side) {
-        // This side is expanded
-        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out z-10`;
+        // This side is expanded - fixed the height to take full screen
+        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out z-10 fixed top-0 left-0 right-0 bottom-0`;
       } else {
         // This side is minimized (other side is expanded)
         return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-500 ease-in-out opacity-0 overflow-hidden`;
