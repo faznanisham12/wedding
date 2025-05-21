@@ -51,13 +51,13 @@ const Index = () => {
       // Mobile styles
       if (expandedSide === null) {
         // Initial state - both sides showing equally
-        return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out`;
+        return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-700 ease-in-out`;
       } else if (expandedSide === side) {
-        // This side is expanded - fixed the height to take full screen
-        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out z-10 fixed top-0 left-0 right-0 bottom-0`;
+        // This side is expanded - fixed the height to take full screen with smooth animation
+        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 transition-all duration-700 ease-in-out z-10 fixed top-0 left-0 right-0 bottom-0 animate-expand-in`;
       } else {
         // This side is minimized (other side is expanded)
-        return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-500 ease-in-out opacity-0 overflow-hidden`;
+        return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-700 ease-in-out opacity-0 overflow-hidden animate-fade-out`;
       }
     } else {
       // Desktop styles - keep existing behavior
@@ -81,7 +81,7 @@ const Index = () => {
           background: "linear-gradient(to bottom, #FDF8F5, #FDE1D3)"
         }}
       >
-        <div className="max-w-md mx-auto">
+        <div className={`max-w-md mx-auto ${expandedSide === 'bride' ? 'animate-content-fade-in' : ''}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-bride-heading animate-fade-in">
             Fazna's Side
           </h2>
@@ -111,7 +111,7 @@ const Index = () => {
           background: "linear-gradient(to bottom, #121212, #1A1A1A)"
         }}
       >
-        <div className="max-w-md mx-auto">
+        <div className={`max-w-md mx-auto ${expandedSide === 'groom' ? 'animate-content-fade-in' : ''}`}>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans mb-6 text-groom-heading animate-fade-in">
             Nisham's Side
           </h2>

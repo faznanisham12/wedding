@@ -135,7 +135,9 @@
 
 .side-slider-container {
   min-height: 50vh;
-  transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @media (min-width: 768px) {
@@ -175,4 +177,47 @@
 
 .animate-fade-in {
   animation: fade-in 0.8s ease forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease forwards;
+}
+
+@keyframes expand-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-expand-in {
+  animation: expand-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-content-fade-in {
+  animation: content-fade-in 0.6s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
