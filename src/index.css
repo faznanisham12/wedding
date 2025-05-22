@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -109,7 +108,7 @@
   }
   
   .bride-heading {
-    @apply font-serif text-bride-heading;
+    @apply font-serif text-bride-heading tracking-wide;
   }
   
   .groom-theme {
@@ -117,7 +116,7 @@
   }
   
   .groom-heading {
-    @apply font-sans text-groom-heading;
+    @apply font-sans text-groom-heading tracking-wide;
   }
   
   .theme-transition {
@@ -126,16 +125,18 @@
 }
 
 .bride-bg-gradient {
-  background: linear-gradient(180deg, #FDF8F5 0%, #FDE1D3 100%);
+  background: linear-gradient(180deg, #F5F5DC 0%, #CBB799 100%);
 }
 
 .groom-bg-gradient {
-  background: linear-gradient(180deg, #121212 0%, #1A1A1A 100%);
+  background: linear-gradient(180deg, #1B1B1B 0%, #0A122A 100%);
 }
 
 .side-slider-container {
   min-height: 50vh;
-  transition: width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @media (min-width: 768px) {
@@ -175,4 +176,92 @@
 
 .animate-fade-in {
   animation: fade-in 0.8s ease forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 0.5s ease forwards;
+}
+
+@keyframes expand-in {
+  from {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-expand-in {
+  animation: expand-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-content-fade-in {
+  animation: content-fade-in 0.6s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* Content sliding animation for smooth movement */
+@keyframes content-slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-content-slide {
+  animation: content-slide 0.001s linear both;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Direction-aware expansion animations */
+@keyframes bride-expand {
+  0% {
+    height: 50%;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.bride-expand-animation {
+  animation: bride-expand 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes groom-expand {
+  0% {
+    height: 50%;
+    top: 50%;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+
+.groom-expand-animation {
+  animation: groom-expand 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
