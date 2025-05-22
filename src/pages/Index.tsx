@@ -97,7 +97,16 @@ const Index = () => {
           backgroundPosition: "center"
         }}
       >
-        <div className="max-w-md mx-auto animate-content-slide">
+        <div className="max-w-md mx-auto animate-content-slide relative w-full">
+          {/* Bride's Photo */}
+          <div className="mb-6 overflow-hidden rounded-full border-4 border-bride-border shadow-md w-48 h-48 mx-auto">
+            <img 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
+              alt="Bride"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-bride-heading animate-fade-in">
             Fazna's Side
           </h2>
@@ -130,7 +139,16 @@ const Index = () => {
           backgroundPosition: "center"
         }}
       >
-        <div className="max-w-md mx-auto animate-content-slide">
+        <div className="max-w-md mx-auto animate-content-slide relative w-full">
+          {/* Groom's Photo */}
+          <div className="mb-6 overflow-hidden rounded-full border-4 border-groom-accent shadow-md w-48 h-48 mx-auto">
+            <img 
+              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80" 
+              alt="Groom"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans mb-6 text-groom-heading animate-fade-in">
             Nisham's Side
           </h2>
