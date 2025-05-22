@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
@@ -91,7 +92,9 @@ const Index = () => {
         onMouseLeave={() => !isMobile && setHoveredSide(null)}
         onClick={() => handleTap('bride')}
         style={{
-          background: "linear-gradient(to bottom, #FDF8F5, #FDE1D3)"
+          backgroundImage: "linear-gradient(to bottom, rgba(245, 245, 220, 0.9), rgba(203, 183, 153, 0.9)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
         }}
       >
         <div className="max-w-md mx-auto animate-content-slide">
@@ -105,7 +108,8 @@ const Index = () => {
           {(!isMobile || expandedSide === 'bride') && (
             <Button
               onClick={() => handleSelectSide('bride')}
-              className="bg-bride-border hover:bg-bride-accent text-bride-heading px-8 py-6 rounded animate-fade-in"
+              variant="outline"
+              className="bg-transparent hover:bg-bride-accent/10 border-2 border-bride-border text-bride-heading px-8 py-6 rounded animate-fade-in"
               size="lg"
             >
               Choose Bride's Side
@@ -121,7 +125,9 @@ const Index = () => {
         onMouseLeave={() => !isMobile && setHoveredSide(null)}
         onClick={() => handleTap('groom')}
         style={{
-          background: "linear-gradient(to bottom, #121212, #1A1A1A)"
+          backgroundImage: "linear-gradient(to bottom, rgba(27, 27, 27, 0.85), rgba(10, 18, 42, 0.9)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center"
         }}
       >
         <div className="max-w-md mx-auto animate-content-slide">
@@ -135,7 +141,8 @@ const Index = () => {
           {(!isMobile || expandedSide === 'groom') && (
             <Button
               onClick={() => handleSelectSide('groom')}
-              className="bg-groom-accent hover:bg-opacity-80 text-groom-heading px-8 py-6 rounded animate-fade-in"
+              variant="outline"
+              className="bg-transparent hover:bg-groom-accent/20 border-2 border-groom-accent text-groom-heading px-8 py-6 rounded animate-fade-in"
               size="lg"
             >
               Choose Groom's Side

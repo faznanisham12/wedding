@@ -1,11 +1,19 @@
 
 import BrideLayout from "@/components/layout/BrideLayout";
 import { Button } from "@/components/ui/button";
-import { Calendar, Heart, MapPin, Image as GalleryIcon } from "lucide-react";
+import { Heart, MapPin, Image as GalleryIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import CalendarInviteButton from "@/components/CalendarInviteButton";
 
 const BrideSaveTheDate = () => {
   const navigate = useNavigate();
+  
+  // Wedding details for the calendar invite
+  const weddingDate = new Date("2025-09-15T14:00:00");
+  const weddingEndDate = new Date("2025-09-15T20:00:00"); // Assuming 6-hour celebration
+  const weddingLocation = "123 Countryside Lane, Rustic County";
+  const weddingTitle = "Fazna & Nisham's Wedding";
+  const weddingDescription = "We are delighted to invite you to our rustic countryside wedding celebration. Join us for an intimate ceremony nestled in the heart of nature.";
   
   return (
     <BrideLayout>
@@ -30,7 +38,7 @@ const BrideSaveTheDate = () => {
         <div className="w-full md:w-2/3 p-8 rounded-lg animate-fade-in bg-white/50 border border-bride-border">
           <div className="flex flex-col md:flex-row justify-around items-center gap-8">
             <div className="text-center">
-              <Calendar className="h-12 w-12 mx-auto mb-4 text-bride-heading" />
+              <p className="h-12 w-12 mx-auto mb-4 text-bride-heading flex items-center justify-center text-2xl font-bold">15</p>
               <h2 className="text-2xl mb-2 bride-heading">September 15, 2025</h2>
               <p>Monday, 2:00 PM</p>
             </div>
@@ -40,6 +48,17 @@ const BrideSaveTheDate = () => {
               <h2 className="text-2xl mb-2 bride-heading">Wildflower Farm</h2>
               <p>123 Countryside Lane, Rustic County</p>
             </div>
+          </div>
+          
+          <div className="mt-8 flex justify-center">
+            <CalendarInviteButton
+              title={weddingTitle}
+              description={weddingDescription}
+              location={weddingLocation}
+              startDate={weddingDate}
+              endDate={weddingEndDate}
+              className="bg-bride-border hover:bg-bride-accent text-bride-heading"
+            />
           </div>
         </div>
         
