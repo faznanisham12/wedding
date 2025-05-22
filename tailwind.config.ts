@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -31,21 +32,20 @@ export default {
         
         // Bride theme colors
         bride: {
-          background: '#F5F5DC', // Beige
-          accent: '#CBB799', // Khaki
-          text: '#6F4D38', // Coffee
-          heading: '#3D211A', // Bistre
-          border: '#A07856', // Chamoisee
+          background: '#FDF8F5',
+          accent: '#FDE1D3',
+          text: '#5A5A5A',
+          heading: '#3D3D3D',
+          border: '#E8D8D0',
         },
         
-        // Updated Groom theme colors with new sophisticated dark palette
+        // Groom theme colors
         groom: {
-          background: '#1B1B1B', // Eclipse Black
-          accent: '#24476C', // Astral Blue
-          text: '#E6E8E6', // Stardust White
-          heading: '#E6E8E6', // Stardust White
-          border: '#A8A9AD', // Moonlight Gray
-          secondary: '#0A122A', // Midnight Navy
+          background: '#121212',
+          accent: '#333333',
+          text: '#EEEEEE',
+          heading: '#FFFFFF',
+          border: '#2A2A2A',
         },
         
         primary: {
@@ -88,7 +88,7 @@ export default {
         }
       },
       fontFamily: {
-        'serif': ['Cormorant Garamond', 'Playfair Display', 'serif'],
+        'serif': ['Playfair Display', 'serif'],
         'sans': ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
@@ -121,14 +121,6 @@ export default {
           '0%': { transform: 'translateY(-10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
-        'expand-in': {
-          '0%': { transform: 'scale(0.95)', opacity: '0.8' },
-          '100%': { transform: 'scale(1)', opacity: '1' }
-        },
-        'content-fade-in': {
-          '0%': { opacity: '0.5', transform: 'translateY(10px) scale(0.98)' },
-          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -137,8 +129,6 @@ export default {
         'fade-out': 'fade-out 0.5s ease-out',
         'slide-up': 'slide-up 0.5s ease-out',
         'slide-down': 'slide-down 0.5s ease-out',
-        'expand-in': 'expand-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
-        'content-fade-in': 'content-fade-in 0.6s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both',
       },
       backgroundImage: {
         'bride-texture': "url('/images/bride-background.jpg')",
