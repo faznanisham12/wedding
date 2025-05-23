@@ -26,7 +26,7 @@ const BrideLayout: React.FC<BrideLayoutProps> = ({ children }) => {
       <header className="py-4 border-b border-bride-border">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-xl md:text-2xl bride-heading">
-            Anna's Wedding
+            Fazna's Wedding
           </h1>
           <nav className="flex gap-2 md:gap-4">
             <Button 

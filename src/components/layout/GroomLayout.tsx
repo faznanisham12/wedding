@@ -26,7 +26,7 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
       <header className="py-4 border-b border-groom-border">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-xl md:text-2xl groom-heading">
-            John's Wedding
+            Nisham's Wedding
           </h1>
           <nav className="flex gap-2 md:gap-4">
             <Button 
@@ -55,7 +55,7 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
             </Button>
             <Button 
               variant="outline" 
-              className="text-groom-heading border-groom-border hover:bg-groom-accent"
+              className="border-2 border-sky-950 text-sky-950 hover:bg-sky-950 hover:text-white font-bold"
               onClick={() => navigate("/")}
               size={isMobile ? "sm" : "default"}
             >
