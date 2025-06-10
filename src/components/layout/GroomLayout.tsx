@@ -25,13 +25,13 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
     <div className="min-h-screen groom-theme groom-bg-gradient">
       <header className="py-4 border-b border-groom-border">
         <div className="container mx-auto flex justify-between items-center px-4">
-          <h1 className="text-xl md:text-2xl groom-heading">
+          <h1 className="text-xl md:text-2xl text-white">
             Nisham's Wedding
           </h1>
           <nav className="flex gap-2 md:gap-4">
             <Button 
               variant="ghost" 
-              className="bg-groom-accent hover:bg-opacity-80 text-groom-heading"
+              className="bg-groom-accent hover:bg-opacity-80 text-white"
               onClick={() => navigate("/groom/save-the-date")}
               size={isMobile ? "sm" : "default"}
             >
@@ -39,7 +39,7 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
             </Button>
             <Button 
               variant="ghost" 
-              className="bg-groom-accent hover:bg-opacity-80 text-groom-heading"
+              className="bg-groom-accent hover:bg-opacity-80 text-white"
               onClick={() => navigate("/groom/gallery")}
               size={isMobile ? "sm" : "default"}
             >
@@ -47,7 +47,7 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
             </Button>
             <Button 
               variant="ghost" 
-              className="bg-groom-accent hover:bg-opacity-80 text-groom-heading"
+              className="bg-groom-accent hover:bg-opacity-80 text-white"
               onClick={() => navigate("/groom/venue")}
               size={isMobile ? "sm" : "default"}
             >

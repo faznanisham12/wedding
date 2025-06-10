@@ -1,17 +1,17 @@
 
 import GroomLayout from "@/components/layout/GroomLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Calendar, Car, Hotel, Utensils } from "lucide-react";
+import { MapPin, Clock, Calendar, Car, Utensils } from "lucide-react";
 
 const GroomVenue = () => {
   return (
     <GroomLayout>
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 groom-heading animate-fade-in">
-          Our Urban Venue
+        <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white animate-fade-in">
+          Reception Details
         </h1>
-        <p className="text-lg max-w-2xl mx-auto mb-12 animate-slide-up">
-          We've chosen an architectural masterpiece in the heart of downtown for our contemporary celebration.
+        <p className="text-lg max-w-2xl mx-auto mb-12 animate-slide-up text-white">
+          Join us for our wedding reception lunch celebration at Kbees Durbar Convention Center.
         </p>
       </div>
 
@@ -19,81 +19,65 @@ const GroomVenue = () => {
         {/* Map */}
         <Card className="bg-groom-accent/20 border-groom-border hover:bg-groom-accent/30 theme-transition animate-fade-in">
           <CardContent className="p-6">
-            <h2 className="text-2xl mb-4 flex items-center groom-heading">
+            <h2 className="text-2xl mb-4 flex items-center text-white">
               <MapPin className="mr-2" /> Location
             </h2>
             <div className="h-64 bg-slate-800 mb-4 rounded">
-              {/* Map placeholder */}
-              <div className="h-full flex items-center justify-center text-white">
-                <p>Skyline Loft Map</p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.5886!2d76.4363!3d9.5938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0884f5e5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sKbees%20Durbar%20Convention%20Center!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded"
+              />
             </div>
-            <h3 className="text-xl mb-2 groom-heading">Skyline Loft</h3>
-            <p>456 Metropolitan Avenue</p>
-            <p>Downtown, City 67890</p>
+            <h3 className="text-xl mb-2 text-white">Kbees Durbar Convention Center</h3>
+            <p className="text-white">Reception Venue</p>
           </CardContent>
         </Card>
 
         {/* Schedule */}
         <Card className="bg-groom-accent/20 border-groom-border hover:bg-groom-accent/30 theme-transition animate-fade-in" style={{ animationDelay: "100ms" }}>
           <CardContent className="p-6">
-            <h2 className="text-2xl mb-4 flex items-center groom-heading">
+            <h2 className="text-2xl mb-4 flex items-center text-white">
               <Calendar className="mr-2" /> Schedule
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
-                <Clock className="mr-3 mt-1 flex-shrink-0" />
+                <Clock className="mr-3 mt-1 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="text-xl groom-heading">7:00 PM - Rooftop Ceremony</h3>
-                  <p>Exchange of vows with city skyline backdrop</p>
+                  <h3 className="text-xl text-white">11:00 AM - Reception Begins</h3>
+                  <p className="text-white">Welcome and gathering</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Utensils className="mr-3 mt-1 flex-shrink-0" />
+                <Utensils className="mr-3 mt-1 flex-shrink-0 text-white" />
                 <div>
-                  <h3 className="text-xl groom-heading">8:30 PM - Loft Reception</h3>
-                  <p>Fine dining and entertainment</p>
+                  <h3 className="text-xl text-white">11:30 AM - 2:30 PM - Lunch</h3>
+                  <p className="text-white">Reception lunch celebration</p>
                 </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Accommodations */}
-        <Card className="bg-groom-accent/20 border-groom-border hover:bg-groom-accent/30 theme-transition animate-fade-in" style={{ animationDelay: "200ms" }}>
-          <CardContent className="p-6">
-            <h2 className="text-2xl mb-4 flex items-center groom-heading">
-              <Hotel className="mr-2" /> Accommodations
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl groom-heading">Metropolitan Hotel</h3>
-                <p>Connected to the venue</p>
-                <p className="text-sm mt-1 opacity-75">Luxury suites with skyline views</p>
-              </div>
-              <div>
-                <h3 className="text-xl groom-heading">Boutique Suites</h3>
-                <p>Two blocks from the venue</p>
-                <p className="text-sm mt-1 opacity-75">Modern design and amenities</p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         {/* Transportation */}
-        <Card className="bg-groom-accent/20 border-groom-border hover:bg-groom-accent/30 theme-transition animate-fade-in" style={{ animationDelay: "300ms" }}>
+        <Card className="bg-groom-accent/20 border-groom-border hover:bg-groom-accent/30 theme-transition animate-fade-in md:col-span-2" style={{ animationDelay: "200ms" }}>
           <CardContent className="p-6">
-            <h2 className="text-2xl mb-4 flex items-center groom-heading">
-              <Car className="mr-2" /> Transportation
+            <h2 className="text-2xl mb-4 flex items-center text-white">
+              <Car className="mr-2" /> Transportation & Parking
             </h2>
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <h3 className="text-xl groom-heading">Private Cars</h3>
-                <p>Luxury transportation service for all guests</p>
+                <h3 className="text-xl text-white">Own Vehicles</h3>
+                <p className="text-white">Ample parking space available at the venue for your convenience</p>
               </div>
               <div>
-                <h3 className="text-xl groom-heading">Valet Parking</h3>
-                <p>Complimentary valet service at the venue</p>
+                <h3 className="text-xl text-white">Location Access</h3>
+                <p className="text-white">Easily accessible location with good road connectivity</p>
               </div>
             </div>
           </CardContent>
