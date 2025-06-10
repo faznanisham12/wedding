@@ -10,7 +10,7 @@ const BrideSaveTheDate = () => {
   // Wedding details for the calendar invite
   const weddingDate = new Date("2025-07-11T17:30:00");
   const weddingEndDate = new Date("2025-07-11T21:30:00");
-  const weddingLocation = "KTDC Gateway Kumarakom";
+  const weddingLocation = "KTDC Kumarakom Gateway Thanneermukkom Road, Cherthala, Thanneermukkom, Kerala 688527 ";
   const weddingTitle = "Fazna & Nisham's Wedding";
   const weddingDescription =
     "Join us for our Nikkah ceremony and wedding dinner on July 11, 2025 at KTDC Gateway Kumarakom.";
@@ -97,14 +97,14 @@ const BrideSaveTheDate = () => {
 
         <div className="mt-12 flex flex-col md:flex-row gap-6 animate-slide-up">
           <Button
-            onClick={() => navigate("/bride/gallery")}
+            onClick={() => navigate("/bride/venue")}
             className="bg-bride-accent hover:bg-opacity-80 text-bride-text"
             size="lg"
           >
             {/* <GalleryIcon className="mr-2 h-5 w-5" /> View Our Gallery
           </Button>
           <Button
-            onClick={() => navigate('/bride/venue')}
+            onClick={() => navigate('/bride/gallery')}
             className="bg-bride-accent hover:bg-opacity-80 text-bride-text"
             size="lg"
           > */}

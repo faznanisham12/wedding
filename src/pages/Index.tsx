@@ -87,7 +87,7 @@ const Index = () => {
             Fazna's Side
           </h2>
           <p className="text-bride-text mb-8  animate-slide-up">
-            Experience our wedding through the bride's perspective, with a warm, rustic and antique aesthetic.
+            Join us for the Nikkah ceremony at Kumarakom.
           </p>
           {/* Only show button if on desktop or if this side is expanded on mobile */}
           {(!isMobile || expandedSide === 'bride') && (
@@ -120,7 +120,7 @@ const Index = () => {
             Nisham's Side
           </h2>
           <p className="text-groom-text mb-8 animate-slide-up">
-            View our wedding through the groom's lens, with a sleek, modern and sophisticated dark aesthetic.
+            Join as for the wedding reception at the groom's hometown.
           </p>
           {/* Only show button if on desktop or if this side is expanded on mobile */}
           {(!isMobile || expandedSide === 'groom') && (

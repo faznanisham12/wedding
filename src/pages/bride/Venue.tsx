@@ -8,7 +8,7 @@ const BrideVenue = () => {
     <BrideLayout>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 bride-heading animate-fade-in">
-          Where, When & How
+          Nikkah details
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-12 animate-slide-up">
           Join us for our blessed Nikkah ceremony and dinner celebration at the beautiful KTDC Gateway Kumarakom.
@@ -24,7 +24,7 @@ const BrideVenue = () => {
             </h2>
             <div className="h-64 bg-slate-200 mb-4 rounded overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.9844444444445!2d76.4334567!3d9.6178889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b088cf8f8f8f8f8%3A0x8f8f8f8f8f8f8f8f!2sKTDC%20Gateway%20Kumarakom!5e0!3m2!1sen!2sin!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.743821040292!2d76.39041357469479!3d9.677311490412258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b087ef69f1d45c7%3A0x5842d94fa04e8216!2sKTDC%20Kumarakom%20Gateway!5e1!3m2!1sen!2sin!4v1749577538110!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

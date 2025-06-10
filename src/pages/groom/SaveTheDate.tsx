@@ -10,7 +10,7 @@ const GroomSaveTheDate = () => {
   // Wedding details for the calendar invite
   const weddingDate = new Date("2025-07-13T11:00:00");
   const weddingEndDate = new Date("2025-07-13T14:30:00");
-  const weddingLocation = "Kbees Durbar Convention Center";
+  const weddingLocation = "Kbees Durbar convention centre Near Pullut Bridge, Kavilkadavu, Kunnumpuram, Kodungallur, Kerala 680664";
   const weddingTitle = "Fazna & Nisham's Wedding Reception";
   const weddingDescription =
     "Join us for our wedding reception lunch celebration on July 13, 2025 at Kbees Durbar Convention Center.";
