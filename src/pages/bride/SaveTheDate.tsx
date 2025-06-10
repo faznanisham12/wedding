@@ -28,15 +28,15 @@ const BrideSaveTheDate = () => {
         <div className="video-container w-full md:w-3/4 lg:w-2/3 rounded-lg overflow-hidden mb-12 border border-bride-border">
           <div className="aspect-w-16 aspect-h-9 bg-slate-200 flex items-center justify-center relative">
             <img 
-              src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&h=450"
+              src="https://res.cloudinary.com/de3hzna7a/image/upload/v1749561678/beige_euz8gd.png"
               alt="Wedding celebration"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+            {/* <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
               <Heart className="h-16 w-16 mb-4" />
               <p className="text-xl font-bold">Holy Matrimony</p>
               <p className="text-sm mt-2 opacity-75 font-normal">Celebrating our union</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -73,13 +73,13 @@ const BrideSaveTheDate = () => {
             className="bg-bride-accent hover:bg-opacity-80 text-bride-text"
             size="lg"
           >
-            <GalleryIcon className="mr-2 h-5 w-5" /> View Our Gallery
+            {/* <GalleryIcon className="mr-2 h-5 w-5" /> View Our Gallery
           </Button>
           <Button
             onClick={() => navigate('/bride/venue')}
             className="bg-bride-accent hover:bg-opacity-80 text-bride-text"
             size="lg"
-          >
+          > */}
             <MapPin className="mr-2 h-5 w-5" /> Event Details
           </Button>
         </div>

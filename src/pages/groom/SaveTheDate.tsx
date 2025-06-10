@@ -28,15 +28,15 @@ const GroomSaveTheDate = () => {
         <div className="video-container w-full md:w-3/4 lg:w-2/3 rounded-lg overflow-hidden mb-12 border border-groom-border">
           <div className="aspect-w-16 aspect-h-9 bg-slate-800 flex items-center justify-center relative">
             <img 
-              src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&h=450"
+              src="https://res.cloudinary.com/de3hzna7a/image/upload/v1749562012/midnight_blue_l2yrsa.png"
               alt="Wedding celebration"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
+            {/* <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
               <Heart className="h-16 w-16 mb-4" />
               <p className="text-xl font-bold">Marriage Reception</p>
               <p className="text-sm mt-2 opacity-75 font-normal">Celebrating our union</p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -68,13 +68,13 @@ const GroomSaveTheDate = () => {
         </div>
         
         <div className="mt-12 flex flex-col md:flex-row gap-6 animate-slide-up">
-          <Button
+          {/* <Button
             onClick={() => navigate('/groom/gallery')}
             className="bg-groom-accent hover:bg-opacity-80 text-white"
             size="lg"
           >
             <GalleryIcon className="mr-2 h-5 w-5" /> View Our Gallery
-          </Button>
+          </Button> */}
           <Button
             onClick={() => navigate('/groom/venue')}
             className="bg-groom-accent hover:bg-opacity-80 text-white"

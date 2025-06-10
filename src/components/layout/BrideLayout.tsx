@@ -37,14 +37,14 @@ const BrideLayout: React.FC<BrideLayoutProps> = ({ children }) => {
             >
               <Home size={isMobile ? 18 : 20} />
             </Button>
-            <Button 
+            {/* <Button 
               variant="ghost" 
               className="bg-bride-border hover:bg-bride-accent text-bride-heading"
               onClick={() => navigate("/bride/gallery")}
               size={isMobile ? "sm" : "default"}
             >
               <GalleryIcon size={isMobile ? 18 : 20} />
-            </Button>
+            </Button> */}
             <Button 
               variant="ghost" 
               className="bg-bride-border hover:bg-bride-accent text-bride-heading"

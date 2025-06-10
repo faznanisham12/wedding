@@ -24,7 +24,7 @@ const GroomVenue = () => {
             </h2>
             <div className="h-64 bg-slate-800 mb-4 rounded">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.5!2d76.4363!3d9.5938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b087c8f5d6b6b01%3A0x5e4c9e1d1d1d1d1d!2sKbees%20Durbar%20Convention%20Center!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.5796566329286!2d76.2029432747026!3d10.22671478989059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081b8c145507b1%3A0xe1f143c6fa7d91cf!2sKbees%20Durbar%20convention%20centre!5e1!3m2!1sen!2sin!4v1749544530335!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -36,6 +36,16 @@ const GroomVenue = () => {
             </div>
             <h3 className="text-xl mb-2 text-white font-bold">Kbees Durbar Convention Center</h3>
             <p className="text-white font-normal">Reception Venue</p>
+            <p className="text-sm text-white">
+              <a 
+                href="https://maps.app.goo.gl/Ln3oyMPuoxT4oSNR6" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-groom-heading hover:underline"
+              >
+                View on Google Maps
+              </a>
+            </p>
           </CardContent>
         </Card>
 

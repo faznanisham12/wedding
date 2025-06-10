@@ -141,7 +141,7 @@
 
 @media (min-width: 768px) {
   .side-slider-container {
-    min-height: 100vh;
+    min-height: 50vh;
   }
 }
 
@@ -265,3 +265,4 @@
 .groom-expand-animation {
   animation: groom-expand 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+

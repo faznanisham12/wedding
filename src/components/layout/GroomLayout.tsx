@@ -37,14 +37,14 @@ const GroomLayout: React.FC<GroomLayoutProps> = ({ children }) => {
             >
               <Home size={isMobile ? 18 : 20} />
             </Button>
-            <Button 
+            {/* <Button 
               variant="ghost" 
               className="bg-groom-accent hover:bg-opacity-80 text-white"
               onClick={() => navigate("/groom/gallery")}
               size={isMobile ? "sm" : "default"}
             >
               <GalleryIcon size={isMobile ? 18 : 20} />
-            </Button>
+            </Button> */}
             <Button 
               variant="ghost" 
               className="bg-groom-accent hover:bg-opacity-80 text-white"
