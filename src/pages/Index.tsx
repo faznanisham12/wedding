@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@/context/ThemeContext";
@@ -12,8 +11,6 @@ const Index = () => {
   const navigate = useNavigate();
   const [animating, setAnimating] = useState(false);
   const isMobile = useIsMobile();
-  // Add animation state to track content transition separately
-  const [contentVisible, setContentVisible] = useState(true);
 
   const handleSelectSide = (side: 'bride' | 'groom') => {
     setAnimating(true);
@@ -29,17 +26,8 @@ const Index = () => {
         // Do nothing if already expanded - allow button tap
         return;
       } else {
-        // First hide existing content
-        setContentVisible(false);
-        
-        // Then expand this side after a short delay
-        setTimeout(() => {
-          setExpandedSide(side);
-          // Show new content after side has started expanding
-          setTimeout(() => {
-            setContentVisible(true);
-          }, 100);
-        }, 50);
+        // Immediate expansion for mobile - no delays
+        setExpandedSide(side);
       }
     }
   };
@@ -49,8 +37,6 @@ const Index = () => {
     setTheme(null);
     // Reset expanded side when component mounts
     setExpandedSide(null);
-    // Initialize content as visible
-    setContentVisible(true);
   }, [setTheme]);
 
   // Define classes based on isMobile
@@ -61,20 +47,19 @@ const Index = () => {
   // Function to determine classes for each side
   const getSideClasses = (side: 'bride' | 'groom') => {
     if (isMobile) {
-      // Mobile styles
+      // Mobile styles with simple, fast animations
       if (expandedSide === null) {
         // Initial state - both sides showing equally
-        return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-700 ease-in-out`;
+        return `side-slider-container w-full h-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-200 ease-out`;
       } else if (expandedSide === side) {
-        const animationClass = side === 'bride' ? 'bride-expand-animation' : 'groom-expand-animation';
-        // This side is expanded - with origin-aware smooth animation
-        return `side-slider-container w-full flex flex-col justify-center items-center text-center p-8 z-10 fixed top-0 left-0 right-0 bottom-0 ${animationClass}`;
+        // This side is expanded - simple and fast
+        return `side-slider-container w-full h-full flex flex-col justify-center items-center text-center p-8 z-10 fixed top-0 left-0 right-0 bottom-0 transition-all duration-250 ease-out`;
       } else {
-        // This side is minimized (other side is expanded)
-        return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-700 ease-in-out opacity-0 overflow-hidden animate-fade-out`;
+        // This side is minimized - simple fade out
+        return `side-slider-container w-full h-0 flex flex-col justify-center items-center text-center p-0 transition-all duration-150 ease-out opacity-0 overflow-hidden`;
       }
     } else {
-      // Desktop styles - keep existing behavior
+      // Desktop styles - EXACTLY as original, unchanged
       return `side-slider-container w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 transition-all duration-500 ease-in-out ${
         hoveredSide === 'groom' && side === 'bride' ? 'md:w-1/4' : 
         hoveredSide === 'bride' && side === 'groom' ? 'md:w-1/4' : 
@@ -98,10 +83,10 @@ const Index = () => {
         }}
       >
         <div className="max-w-md mx-auto animate-content-slide">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 text-bride-heading animate-fade-in">
+          <h2 className="text-3xl md:text-5xl tracking-tight font-serif mb-6 text-bride-heading animate-fade-in">
             Fazna's Side
           </h2>
-          <p className="text-bride-text mb-8 animate-slide-up">
+          <p className="text-bride-text mb-8  animate-slide-up">
             Experience our wedding through the bride's perspective, with a warm, rustic and antique aesthetic.
           </p>
           {/* Only show button if on desktop or if this side is expanded on mobile */}
@@ -131,7 +116,7 @@ const Index = () => {
         }}
       >
         <div className="max-w-md mx-auto animate-content-slide">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans mb-6 text-groom-heading animate-fade-in">
+          <h2 className="text-3xl md:text-4xl tracking-tighter font-normal mb-6 text-groom-heading animate-fade-in">
             Nisham's Side
           </h2>
           <p className="text-groom-text mb-8 animate-slide-up">
