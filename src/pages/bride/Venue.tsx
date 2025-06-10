@@ -1,17 +1,17 @@
 
 import BrideLayout from "@/components/layout/BrideLayout";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Calendar, Car, Hotel, Utensils } from "lucide-react";
+import { MapPin, Clock, Calendar, Car } from "lucide-react";
 
 const BrideVenue = () => {
   return (
     <BrideLayout>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 bride-heading animate-fade-in">
-          Our Rustic Venue
+          Where, When & How
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-12 animate-slide-up">
-          Join us for a magical celebration at our carefully selected countryside venue surrounded by nature.
+          Join us for our blessed Nikkah ceremony and dinner celebration at the beautiful KTDC Gateway Kumarakom.
         </p>
       </div>
 
@@ -22,15 +22,29 @@ const BrideVenue = () => {
             <h2 className="text-2xl mb-4 flex items-center bride-heading">
               <MapPin className="mr-2" /> Location
             </h2>
-            <div className="h-64 bg-slate-200 mb-4 rounded">
-              {/* Map placeholder */}
-              <div className="h-full flex items-center justify-center">
-                <p>Wildflower Farm Map</p>
-              </div>
+            <div className="h-64 bg-slate-200 mb-4 rounded overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.9844444444445!2d76.4334567!3d9.6178889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b088cf8f8f8f8f8%3A0x8f8f8f8f8f8f8f8f!2sKTDC%20Gateway%20Kumarakom!5e0!3m2!1sen!2sin!4v1234567890123"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
-            <h3 className="text-xl mb-2 bride-heading">Wildflower Farm</h3>
-            <p>123 Countryside Lane</p>
-            <p>Rustic County, State 12345</p>
+            <h3 className="text-xl mb-2 bride-heading">KTDC Gateway Kumarakom</h3>
+            <p>Kumarakom, Kerala</p>
+            <p className="text-sm mt-2">
+              <a 
+                href="https://maps.app.goo.gl/BxLJHWQvFR6mPUcD7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-bride-heading hover:underline"
+              >
+                View on Google Maps
+              </a>
+            </p>
           </CardContent>
         </Card>
 
@@ -44,56 +58,37 @@ const BrideVenue = () => {
               <div className="flex items-start">
                 <Clock className="mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl bride-heading">2:00 PM - Garden Ceremony</h3>
-                  <p>Join us under the floral arch for our vow exchange</p>
+                  <h3 className="text-xl bride-heading">5:30 PM - Nikkah Ceremony</h3>
+                  <p>Join us for the sacred matrimony ceremony</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <Utensils className="mr-3 mt-1 flex-shrink-0" />
+                <Clock className="mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl bride-heading">4:00 PM - Barn Reception</h3>
-                  <p>Farm-to-table dinner and rustic celebration</p>
+                  <h3 className="text-xl bride-heading">6:30 PM - 9:30 PM - Dinner</h3>
+                  <p>Celebration dinner and festivities</p>
                 </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Accommodations */}
-        <Card className="bg-white/50 border-bride-border hover:shadow-md theme-transition animate-fade-in" style={{ animationDelay: "200ms" }}>
-          <CardContent className="p-6">
-            <h2 className="text-2xl mb-4 flex items-center bride-heading">
-              <Hotel className="mr-2" /> Accommodations
-            </h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl bride-heading">Countryside Inn</h3>
-                <p>Just 5 minutes from the venue</p>
-                <p className="text-sm mt-1 opacity-75">Charming cottages with garden views</p>
-              </div>
-              <div>
-                <h3 className="text-xl bride-heading">Rustic Cabins</h3>
-                <p>On the farm property</p>
-                <p className="text-sm mt-1 opacity-75">Limited availability - book early</p>
               </div>
             </div>
           </CardContent>
         </Card>
 
         {/* Transportation */}
-        <Card className="bg-white/50 border-bride-border hover:shadow-md theme-transition animate-fade-in" style={{ animationDelay: "300ms" }}>
+        <Card className="bg-white/50 border-bride-border hover:shadow-md theme-transition animate-fade-in md:col-span-2" style={{ animationDelay: "200ms" }}>
           <CardContent className="p-6">
             <h2 className="text-2xl mb-4 flex items-center bride-heading">
               <Car className="mr-2" /> Transportation
             </h2>
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-xl bride-heading">Horse & Carriage</h3>
-                <p>Available for bridal party from the Countryside Inn</p>
+                <h3 className="text-xl bride-heading">Transport Arrangement</h3>
+                <p>Transport may be arranged from Pandalam</p>
+                <p className="text-sm mt-1 opacity-75">Please contact us for details</p>
               </div>
               <div>
                 <h3 className="text-xl bride-heading">Parking</h3>
-                <p>Ample field parking available at the venue</p>
+                <p>Ample parking space available at the venue</p>
+                <p className="text-sm mt-1 opacity-75">Complimentary parking for all guests</p>
               </div>
             </div>
           </CardContent>

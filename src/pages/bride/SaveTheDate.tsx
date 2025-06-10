@@ -9,11 +9,11 @@ const BrideSaveTheDate = () => {
   const navigate = useNavigate();
   
   // Wedding details for the calendar invite
-  const weddingDate = new Date("2025-09-15T14:00:00");
-  const weddingEndDate = new Date("2025-09-15T20:00:00"); // Assuming 6-hour celebration
-  const weddingLocation = "123 Countryside Lane, Rustic County";
+  const weddingDate = new Date("2025-07-11T17:30:00");
+  const weddingEndDate = new Date("2025-07-11T21:30:00");
+  const weddingLocation = "KTDC Gateway Kumarakom, Kumarakom, Kerala";
   const weddingTitle = "Fazna & Nisham's Wedding";
-  const weddingDescription = "We are delighted to invite you to our rustic countryside wedding celebration. Join us for an intimate ceremony nestled in the heart of nature.";
+  const weddingDescription = "We are delighted to invite you to our Nikkah ceremony and dinner celebration at KTDC Gateway Kumarakom.";
   
   return (
     <BrideLayout>
@@ -22,15 +22,15 @@ const BrideSaveTheDate = () => {
           Save The Date
         </h1>
         <p className="text-lg md:text-xl mb-12 max-w-2xl animate-slide-up">
-          We are delighted to invite you to our rustic countryside wedding celebration on September 15, 2025. Join us for an intimate ceremony nestled in the heart of nature.
+          We are delighted to invite you to our Nikkah ceremony and dinner celebration on July 11, 2025. Join us for this blessed occasion at the beautiful KTDC Gateway Kumarakom.
         </p>
         
         <div className="video-container w-full md:w-3/4 lg:w-2/3 rounded-lg overflow-hidden mb-12 border-4 border-bride-border shadow-md">
           <div className="aspect-w-16 aspect-h-9 bg-slate-200 flex items-center justify-center">
             <div className="text-bride-text text-center p-6">
               <Heart className="h-16 w-16 mx-auto mb-4 text-bride-heading" />
-              <p className="text-xl">Our Rustic Love Story</p>
-              <p className="text-sm mt-2 opacity-75">A glimpse into our journey together</p>
+              <p className="text-xl">Holy Matrimony</p>
+              <p className="text-sm mt-2 opacity-75">A glimpse into our blessed journey</p>
             </div>
           </div>
         </div>
@@ -38,15 +38,15 @@ const BrideSaveTheDate = () => {
         <div className="w-full md:w-2/3 p-8 rounded-lg animate-fade-in bg-white/50 border border-bride-border">
           <div className="flex flex-col md:flex-row justify-around items-center gap-8">
             <div className="text-center">
-              <p className="h-12 w-12 mx-auto mb-4 text-bride-heading flex items-center justify-center text-2xl font-bold">15</p>
-              <h2 className="text-2xl mb-2 bride-heading">September 15, 2025</h2>
-              <p>Monday, 2:00 PM</p>
+              <p className="h-12 w-12 mx-auto mb-4 text-bride-heading flex items-center justify-center text-2xl font-bold">11</p>
+              <h2 className="text-2xl mb-2 bride-heading">July 11, 2025</h2>
+              <p>Friday, 5:30 PM onwards</p>
             </div>
             
             <div className="text-center">
               <MapPin className="h-12 w-12 mx-auto mb-4 text-bride-heading" />
-              <h2 className="text-2xl mb-2 bride-heading">Wildflower Farm</h2>
-              <p>123 Countryside Lane, Rustic County</p>
+              <h2 className="text-2xl mb-2 bride-heading">KTDC Gateway Kumarakom</h2>
+              <p>Kumarakom, Kerala</p>
             </div>
           </div>
           
@@ -75,7 +75,7 @@ const BrideSaveTheDate = () => {
             className="bg-bride-border hover:bg-bride-accent text-bride-heading"
             size="lg"
           >
-            <MapPin className="mr-2 h-5 w-5" /> View Venue Details
+            <MapPin className="mr-2 h-5 w-5" /> Where, When & How
           </Button>
         </div>
       </div>
