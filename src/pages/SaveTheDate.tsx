@@ -17,7 +17,7 @@ const SaveTheDate = () => {
   return (
     <ThemedLayout>
       <div className="flex flex-col items-center text-center mb-12">
-        <h1 className={`text-4xl md:text-5xl lg:text-6xl mb-6 ${headingClass} animate-fade-in`}>Save The Date</h1>
+        <h1 className={`text-4xl md:text-4xl font-serif mb-6 ${headingClass} animate-fade-in`}>Save The Date</h1>
         <p className="text-lg md:text-xl mb-12 max-w-2xl animate-slide-up">
           We are getting married on September 15, 2025. We would love for you to join us on our special day.
         </p>

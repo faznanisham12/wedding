@@ -7,7 +7,7 @@ const GroomVenue = () => {
   return (
     <GroomLayout>
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white font-bold animate-fade-in">
+        <h1 className="text-4xl md:text-5xl tracking-tighter  font-medium mb-6 text-white animate-fade-in">
           Reception Details
         </h1>
         <p className="text-lg max-w-2xl mx-auto mb-12 animate-slide-up text-white font-normal">
