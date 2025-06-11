@@ -120,7 +120,7 @@ const Index = () => {
             Nisham's Side
           </h2>
           <p className="text-groom-text mb-8 animate-slide-up">
-            Join as for the wedding reception at the groom's hometown.
+            Join us for the wedding reception at the groom's hometown.
           </p>
           {/* Only show button if on desktop or if this side is expanded on mobile */}
           {(!isMobile || expandedSide === 'groom') && (
